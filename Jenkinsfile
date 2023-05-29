@@ -1,17 +1,12 @@
-  pipeline{
+  Diego Pino — hoy a las 17:52
+pipeline {
     agent any
-    stages {
-      stage('Initialize') {
-        steps {
-          echo 'Este es el primer paso'
+        stages {
+
+        stage('Build') {
+            steps {
+                sh 'mvn -DskipTests clean package
+
+            }
         }
-      }
-      stage('Build') {
-        steps {
-          sh 'mvn -DskipTests clean package'
-          sh 'mvn -B package'
-          echo 'Este es el segundo paso'
-        }
-      }
-    }
   }
