@@ -8,7 +8,7 @@
       }
       stage('Build') {
         steps{
-          sh 'mvn -B package'
+          mvn -DskipTests clean package
           echo 'Este es el segundo paso'
         }
       }
