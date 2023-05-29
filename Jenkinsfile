@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Build') {
       steps {
-        bat 'mvn -B package'
+        sh 'mvn -B package'
         echo 'Este es el segundo paso'
       }
     }
